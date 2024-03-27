@@ -1,8 +1,6 @@
 import streamlit as st
-import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
 
-rand = np.random.normal(1,2,size=20)
-fig, ab = plt.subplots()
-ab.hist(rand,bins = 15)
-st.pyplot(fig)
+df = pd.DataFrame(np.random.randn(10,2), columns = ['x','y'])
+st.line_chart(df)
